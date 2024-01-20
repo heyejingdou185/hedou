@@ -3,90 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CityHao</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Poiret+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        /* in css file, the code should like this */
+    </style>
 </head>
 <body>
-    <div class="nav">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#getting-here">GETTING HERE</a>
-        <a href="#places-to-stay">PLACES TO STAY</a>
-        <a href="#tourist-attractions">TOURIST ATTRACTIONS</a>
-        <a href="#travel-agents">TRAVEL AGENTS</a>
-    </div>
-    <div class="header">
-        <h1>Paris, France</h1>
-        <p>Welcome to City of Love and Romance!</p>
-        <img src="Welcome.png"/>
-    </div>
-    
-    <div class="container">
-        <h1>About the City</h1>
-        <p>Paris, capital of France, is one of the most important and influential cities in the world. In terms of tourism, Paris is the second most visited city in Europe after London. In this travel guide, you'll find out about the city's top attractions, as well as useful travel advice on how to get to Paris and how to save money whilst traveling.</p>
-        <p>The most famous attractions in Paris are:</p>
-        <ol>
-            <li>Arc de Triomphe</li>
-            <li>Eiffel Tower</li>
-            <li>Louvre Art Museum</li>
-        </ol>
-        <div class="row">
-            <div class="column">
-            <img src="Arc de Triomphe.png">
-            <p>Arc de Triomphe</p>
-            </div>
-            <div class="column">
-            <img src="Eiffel Tower.png">
-            <p>Eiffel Tower</p>
-            </div>
-            <div class="column">
-            <img src="Louvre Art Museum.png">
-            <p>Louvre Art Museum</p>
-            </div>
-        </div>
-    </div>
+    <p>this the string</p>
+    <label>Number 1:</label>
+    <input type="text" placeholder="Enter first number" id = "i" value=""/>
+    <label>Number 2:</label>
+    <input type="text" placeholder="Enter second number" id = "j" value=""/>
+    <button>Calculate</button>
 
-<div class="table_title">
-    <h1>Book a Flight</h1>
-</div>
-<table class="table">
-    <tr>
-    <th>Flight</th>
-    <th>Departing From</th>
-    <th>Arriving In</th>
-    <th>Price</th>
-    </tr>
-    <tr>
-    <td>AA205</td>
-    <td>Toronto</td>
-    <td>Paris</td>
-    <td>$790</td>
-    </tr>
-    <tr>
-    <td>RY9163</td>
-    <td>Rome</td>
-    <td>Paris</td>
-    <td>$165</td>
-    </tr>
-    <tr>
-    <td>UA833</td>
-    <td>Jakarta</td>
-    <td>Paris</td>
-    <td>$2847</td>
-    </tr>
+    <p id="reslults-label">Result: </p>
 
-</table>
 
-<div class="footer">
-    <h1>More Information</h1>
-    <ion-icon name="train-outline"></ion-icon>
-    <ion-icon name="bed-outline"></ion-icon>
-    <ion-icon name="car-outline"></ion-icon>
-</div>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <label>Choice one</label>
+    <select id="dropDown">
+        <option value = "addition">+</option>
+        <option value = "subtraction">-</option>
+        <option value = "multiplication">x</option>
+        <option value = "division">/</option>
+    </select>
+    <p id="pvalue">result</p>
+    <script>
+        //Code in this section will be javescript
+        /*
+        sassdf
+        dfsdsf
+        */
+
+        
+        let a = 5.5
+        console.log(typeof(a))
+        a = "5"
+        console.log(typeof(a))
+        a = '5'
+        console.log(typeof(a))
+        a = true
+        console.log(typeof(a))
+        a = null
+        console.log(typeof(a))
+
+        const doMath=()=>{
+            const c = 1
+            const d = 4
+            const sum = c + d
+            console.log(c+d)
+        }
+        doMath()
+
+        const g=(h,i)=>{
+            const sum = h+i
+            console.log(sum)
+        }
+        g(8,9)
+
+    </script>
+        
+    <script>
+        const buttonPressed=()=>{
+            const i = document.getElementById("i")
+            const j = document.getElementById("j")
+            const numI = i.value 
+            const numJ = j.value 
+            const sum = parseInt(numI)+parseInt(numJ)
+            console.log(sum)
+            // alert("The sum is " + sum)
+            const resultP = document.getElementById("reslults-label") 
+            resultP.innerText= "Result: "+ sum
+        }
+        document.querySelector("button").addEventListener("click", buttonPressed)
+
+        const optionFunc=()=>{
+            const options = document.getElementById("dropDown")
+            const optionsValue = options.value
+            console.log(optionsValue)
+          
+            if (optionsValue === "addition"){
+                const i = document.getElementById("i")
+                const j = document.getElementById("j")
+                const numI = i.value 
+                const numJ = j.value 
+                const sum = parseInt(numI)+parseInt(numJ)
+                console.log(sum)
+
+                // where is the code to output to pvalue?
+                const resultP = document.getElementById("pvalue") 
+                resultP.innerText= "Result: "+ sum
+            }else if(optionsValue === "subtraction"){
+                const i = document.getElementById("i")
+                const j = document.getElementById("j")
+                const numI = i.value 
+                const numJ = j.value 
+                const subtraction = parseInt(numI)-parseInt(numJ)
+                console.log(subtraction)
+                
+                // where is the code to touptut to pvalue?
+                const resultP = document.getElementById("pvalue") 
+                resultP.innerText= "Result: "+ subtraction
+            }else if(optionsValue === "division"){
+                const i = document.getElementById("i")
+                const j = document.getElementById("j")
+                const numI = i.value 
+                const numJ = j.value 
+                const division = parseInt(numI)/parseInt(numJ)
+                console.log(division)
+                
+                // where is the code to touptut to pvalue?
+                const resultP = document.getElementById("pvalue") 
+                resultP.innerText= "Result: "+ division
+            }else{
+                const i = document.getElementById("i")
+                const j = document.getElementById("j")
+                const numI = i.value 
+                const numJ = j.value 
+                const multiplication = parseInt(numI)*parseInt(numJ)
+                console.log(multiplication)            
+
+                // whre is the code to output to pvalue?
+                const resultP = document.getElementById("pvalue") 
+                resultP.innerText= "Result: "+ multiplication
+            }
+                
+
+        }
+        document.getElementById("dropDown").addEventListener("change", optionFunc)
+    </script>
 </body>
 </html>
