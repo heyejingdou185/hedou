@@ -1,0 +1,83 @@
+body { 
+    font-family: Arial, sans-serif; 
+}
+.nav { 
+    display: flex;
+    justify-content: center;
+    background-color: #092074; 
+    padding: 1px 0px; 
+}
+.nav a { 
+    color: white; 
+    text-decoration: none; 
+    padding: 14px 20px; 
+    display: inline-block; 
+}
+.header { 
+    text-align: center; 
+}
+.header h1{ 
+    font-family: 'Poiret One', sans-serif;
+}
+.header img{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: 1px 15%; 
+}
+
+.container { 
+    padding: 10px 10%; 
+}
+.container h1{ 
+    text-align: center; 
+    font-family: 'Poiret One', sans-serif;
+}
+
+
+.row{  
+    display: flex;
+    justify-content: center;
+    
+}
+.column { 
+    float:inline-start; 
+    width: 50%; 
+    padding: 20px; 
+    
+}
+.column img{ 
+    width: 100%; 
+}
+
+.table_title h1{
+    text-align: center; 
+    font-family: 'Poiret One', sans-serif;
+}
+.table { 
+    padding:20px;
+    width: 80%;
+    margin: 10px 10%;
+    border-width: 1px; 
+    border-style: solid; 
+    border-color: #89898c
+}
+
+.table th, .table td { 
+    padding:0px 10px; 
+    text-align: left; 
+
+}
+
+.footer { 
+    padding: 20px; 
+    text-align: center; 
+}
+.footer h1{ 
+    text-align: center; 
+    font-family: 'Poiret One', sans-serif;
+}
+.footer ion-icon{
+    padding: 1px 60px;
+    color:#092074; height:50px; font-size:80px;
+}
